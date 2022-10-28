@@ -1,0 +1,59 @@
+@import '../../styles/colors.scss';
+
+.toursicon {
+  margin: 20px 0px;
+  width: 240px;
+
+  .tourImage {
+    position: relative;
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+  }
+
+  .tourDetails {
+    .tourTitle {
+      color: $heading-color;
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    .tourPrice {
+      color: $price-color;
+      font-weight: 600;
+      font-size: 22px;
+
+      i {
+        margin-right: 10px;
+      }
+    }
+
+    .flightDetails {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+
+      .flightDetail {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+
+      }
+    }
+
+    button {
+      background-color: $primary-color;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  }
+
+}
