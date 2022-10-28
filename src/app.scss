@@ -1,0 +1,7 @@
+@import './styles/fonts.scss';
+@import './styles/colors.scss';
+
+.app {
+  color: $text-color;
+  font-family: $primary-font;
+}

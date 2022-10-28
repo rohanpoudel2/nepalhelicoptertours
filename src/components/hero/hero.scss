@@ -1,0 +1,34 @@
+@import '../../styles/fonts.scss';
+
+.hero {
+  position: relative;
+  font-family: $primary-font;
+  margin-bottom: 20px;
+
+  video {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  .overlay {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    span {
+      color: white;
+      font-family: $secondary-font;
+      font-size: 50px;
+    }
+
+    p {
+      color: white;
+      font-size: 22px;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+@import '../../styles/mixins.scss';
+
+.featuredtrips {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0px;
+  font-family: $primary-font;
+
+  .left {
+    flex: 1;
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+
+  .right {
+    flex: 1;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .tripDesc {
+      .title {
+        font-size: 34px;
+        font-weight: 700;
+        color: $primary-color;
+        margin-bottom: 10px;
+
+        .divider {
+          width: 100px;
+          height: 5px;
+          border-radius: 50px;
+          background-color: $highlight-color;
+        }
+      }
+
+      .sub-title {
+        font-size: 24px;
+        font-weight: 700;
+        display: flex;
+        margin-bottom: 20px;
+
+        .price {
+          margin-left: 5px;
+          color: $price-color;
+          font-size: 284x;
+        }
+      }
+
+      .desc {
+        font-size: 18px;
+
+        p {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          line-height: 30px;
+          -webkit-line-clamp: 5;
+          /* number of lines to show */
+          -webkit-box-orient: vertical;
+        }
+      }
+
+    }
+
+    button {
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      padding: 20px;
+      width: 200px;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  }
+}

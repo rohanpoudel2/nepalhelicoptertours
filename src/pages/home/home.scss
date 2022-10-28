@@ -1,0 +1,25 @@
+@import '../../styles/fonts.scss';
+@import '../../styles/colors.scss';
+
+.home {
+  font-family: $primary-font;
+
+  .greetTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: $heading-color;
+
+    .divider {
+      width: 250px;
+      height: 5px;
+      background-color: $highlight-color;
+      border-radius: 50px;
+    }
+  }
+
+}
