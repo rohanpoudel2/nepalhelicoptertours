@@ -7,6 +7,7 @@ import Tours from './pages/tours/Tours'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './app.scss'
 import Tour from './pages/tour/Tour'
+import Contact from './pages/contact/Contact'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path='/' element={<Home />} />
             <Route path='/tours/:type' element={<Tours />} />
             <Route path='/tours/:type/:tourID' element={<Tour />} />
+            <Route path='/contact' element={<Contact />} />
           </Routes>
           <Footer />
         </Container>

@@ -1,0 +1,60 @@
+@import '../../styles/colors.scss';
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0px;
+  width: 100%;
+
+  .title {
+    font-size: 60px;
+    color: $heading-color;
+    font-weight: 700;
+    margin-bottom: 50px;
+
+    span {
+      color: $highlight-color;
+      text-transform: uppercase;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    .form-item {
+      display: flex;
+      flex-direction: column;
+      flex: 30%;
+
+      label {
+        font-weight: 700;
+        color: $heading-color;
+        margin-bottom: 5px;
+      }
+
+      input,
+      textarea {
+        padding: 10px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        outline-color: $highlight-color;
+      }
+    }
+  }
+
+  button {
+    border: none;
+    background-color: $primary-color;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+}
