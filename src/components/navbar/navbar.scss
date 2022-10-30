@@ -61,15 +61,15 @@
         margin-left: 20px;
         cursor: pointer;
         font-size: 20px;
-        transition: 0.2s ease-in-out;
+        transition: 0.2s;
 
         @include small-down {
           width: 100%;
         }
 
         &:hover {
-          font-weight: 600;
-          transition: 0.2s ease-in-out;
+          border-bottom: 5px solid $highlight-color;
+          transition: 0.2s;
         }
 
         button {

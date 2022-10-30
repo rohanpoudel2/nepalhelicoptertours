@@ -22,7 +22,7 @@ const NavBar = () => {
           <div className="nav-element"><Link to='/'>Home</Link></div>
           <div className="nav-element"><Link to="/tours/type='trek'">Helicopter Treks</Link></div>
           <div className="nav-element"><Link to="/tours/type='tours'">Helicopter Tours</Link></div>
-          <div className="nav-element"><Link to='/'>About Us</Link></div>
+          <div className="nav-element"><Link to='/'>Contact</Link></div>
           <div className="nav-element">
             <button>
               <i className="fa-brands fa-whatsapp"></i>

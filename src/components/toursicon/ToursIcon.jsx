@@ -1,5 +1,6 @@
 import './toursicon.scss'
 import Muktinath from '../../images/tours/muktinath/muktinath.jpg'
+import { Link } from 'react-router-dom'
 
 const ToursIcon = () => {
   return (
@@ -24,7 +25,9 @@ const ToursIcon = () => {
             🗻 4400m Max Altitute From Sea Level
           </div>
         </div>
-        <button>View More Details</button>
+        <Link to={`/tours/type='trek'/tourID='123'`}>
+          <button>View More Details</button>
+        </Link>
       </div>
     </div>
   )
