@@ -1,5 +1,5 @@
 import './toursicon.scss'
-import Muktinath from '../../images/tours/muktinath/muktinath.jpg'
+import Muktinath from '../../images/tours/muktinath/muktinath.jpeg'
 import { Link } from 'react-router-dom'
 
 const ToursIcon = () => {

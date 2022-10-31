@@ -6,8 +6,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Parallax, Pagination, Navigation, Autoplay } from "swiper";
 
-import Muktinath1 from '../../images/tours/muktinath/muktinath.jpg'
-import Muktinath2 from '../../images/tours/muktinath/muktinath1.jpg'
+import Muktinath1 from '../../images/tours/muktinath/muktinath.jpeg'
+import Muktinath2 from '../../images/tours/muktinath/muktinath1.jpeg'
 
 const Tour = () => {
   return (

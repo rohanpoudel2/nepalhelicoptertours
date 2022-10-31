@@ -2,6 +2,7 @@ import './home.scss'
 import Hero from "../../components/hero/Hero"
 import FeaturedTrips from '../../components/featuredTrips/FeaturedTrips'
 import NewsLetter from '../../components/newsletter/NewsLetter'
+import FeaturedTripsReversed from '../../components/featuredTripsReversed/FeaturedTripsReversed'
 
 const home = () => {
   return (
@@ -12,7 +13,7 @@ const home = () => {
         <div className="divider"> </div>
       </div>
       <FeaturedTrips />
-      <FeaturedTrips flip={true} />
+      <FeaturedTripsReversed />
       <FeaturedTrips />
       <NewsLetter />
     </div>

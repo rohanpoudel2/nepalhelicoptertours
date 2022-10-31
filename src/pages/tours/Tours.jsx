@@ -1,5 +1,5 @@
 import './tours.scss'
-import HelicopterTours from '../../images/toursbanner.jpg'
+import HelicopterTours from '../../images/toursbanner.jpeg'
 import ToursIcon from '../../components/toursicon/ToursIcon'
 import NewsLetter from '../../components/newsletter/NewsLetter'
 

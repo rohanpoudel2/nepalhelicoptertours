@@ -2,15 +2,11 @@
 @import '../../styles/fonts.scss';
 @import '../../styles/mixins.scss';
 
-.featuredtripsreversed {
+.featuredtrips {
   display: flex;
   justify-content: space-between;
   margin: 50px 0px;
   font-family: $primary-font;
-  flex-direction: row-reverse;
-  background-color: $background-highlight;
-  padding: 20px;
-  border-radius: 5px;
 
   @include small-down {
     flex-direction: column;
@@ -27,18 +23,18 @@
 
   .right {
     flex: 1;
-    margin-right: 100px;
+    margin-left: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
 
     @include medium-only {
-      margin-right: 50px;
+      margin-left: 50px;
     }
 
     @include small-down {
-      margin-right: 0px;
+      margin-left: 0px;
     }
 
     .tripDesc {

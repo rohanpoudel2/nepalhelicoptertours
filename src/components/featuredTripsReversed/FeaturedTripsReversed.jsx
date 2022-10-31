@@ -1,10 +1,10 @@
-import './featuredtrips.scss'
+import './featuredtripsreversed.scss'
 import muktinath from '../../images/tours/muktinath/muktinath.jpeg'
 
-const FeaturedTrips = () => {
+const FeaturedTripsReversed = () => {
 
   return (
-    <div className="featuredtrips">
+    <div className="featuredtripsreversed">
       <div className="left">
         <img src={muktinath} alt="Muktinath" />
       </div>
@@ -34,4 +34,4 @@ const FeaturedTrips = () => {
   )
 }
 
-export default FeaturedTrips
+export default FeaturedTripsReversed

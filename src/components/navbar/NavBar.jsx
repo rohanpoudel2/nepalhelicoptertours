@@ -19,11 +19,17 @@ const NavBar = () => {
           <i className="fa-solid fa-bars"></i>
         </div>
         <div className="nav-elements">
+          <div className="nav-element" id='mobile'>
+            <button>
+              <i className="fa-brands fa-whatsapp"></i>
+              <span>Connect with us</span>
+            </button>
+          </div>
           <div className="nav-element"><Link onClick={() => setResponsiveNav(!responsiveNav)} to='/'>Home</Link></div>
           <div className="nav-element"><Link onClick={() => setResponsiveNav(!responsiveNav)} to="/tours/type='trek'">Helicopter Treks</Link></div>
           <div className="nav-element"><Link onClick={() => setResponsiveNav(!responsiveNav)} to="/tours/type='tours'">Helicopter Tours</Link></div>
           <div className="nav-element"><Link onClick={() => setResponsiveNav(!responsiveNav)} to='/contact'>Contact</Link></div>
-          <div className="nav-element">
+          <div className="nav-element" id='desktop'>
             <button>
               <i className="fa-brands fa-whatsapp"></i>
               <span>Connect with us</span>
