@@ -59,6 +59,12 @@
     align-items: center;
     justify-content: space-between;
 
+    @include small-down {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     .title {
       span {
         font-size: 20px;

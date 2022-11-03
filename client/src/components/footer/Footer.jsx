@@ -72,7 +72,9 @@ const Footer = () => {
             <div className="divider"> </div>
           </div>
           <div className="footer-links">
-            <div className="footer-link">Affiliate Program</div>
+            <Link to='/affiliate'>
+              <div className="footer-link">Affiliate Program</div>
+            </Link>
             <div className="footer-link">Employment</div>
           </div>
         </div>

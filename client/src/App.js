@@ -11,6 +11,7 @@ import Contact from './pages/contact/Contact'
 import ExtraTour from './pages/extratour/ExtraTour'
 import Gallery from './pages/gallery/Gallery'
 import Why from './pages/why/Why'
+import Affiliate from './pages/affiliate/Affiliate'
 
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
             <Route path='/extra/:id' element={<ExtraTour />} />
             <Route path='/gallery/:type' element={<Gallery />} />
             <Route path='/why' element={<Why />} />
+            <Route path='/affiliate' element={<Affiliate />} />
           </Routes>
           <Footer />
         </Container>
