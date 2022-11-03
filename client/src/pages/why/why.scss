@@ -1,0 +1,23 @@
+@import '../../styles/colors.scss';
+
+.why {
+  margin-top: 20px;
+  margin-bottom: 50px;
+
+  .title {
+    font-size: 48px;
+    font-weight: 800;
+    color: $heading-color;
+
+    &::first-line {
+      font-size: 60px;
+      color: $highlight-color;
+    }
+  }
+
+  .description {
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+  }
+}

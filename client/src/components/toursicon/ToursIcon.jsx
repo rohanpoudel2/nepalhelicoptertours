@@ -2,30 +2,30 @@ import './toursicon.scss'
 import Muktinath from '../../images/tours/muktinath/muktinath.jpeg'
 import { Link } from 'react-router-dom'
 
-const ToursIcon = () => {
+const ToursIcon = ({ data }) => {
   return (
     <div className="toursicon">
       <div className="tourImage">
         <img src={Muktinath} alt="tourIMG" />
       </div>
       <div className="tourDetails">
-        <div className="tourTitle">Muktinath Helicopter Tour</div>
+        <div className="tourTitle">{data.NAME}</div>
         <div className="tourPrice">
           <i className="fa-solid fa-tag"></i>
-          ₹60000
+          ₹{data.PRICE}
         </div>
         <div className="flightDetails">
           <div className="flightDetail">
-            🛫 Departs from TIA, Kathmandu
+            🛫 Departs from {data.DEPARTURE}
           </div>
           <div className="flightDetail">
-            ⏱️ Approx 30 min flight time
+            ⏱️ Approx ${data.DURATION} flight time
           </div>
           <div className="flightDetail">
-            🗻 4400m Max Altitute From Sea Level
+            🗻 {data.ALTITUTE} Max Altitute From Sea Level
           </div>
         </div>
-        <Link to={`/tours/type='trek'/tourID='123'`}>
+        <Link to={`/tours/type='trek'/tourID=${data.TOURSID}`}>
           <button>View More Details</button>
         </Link>
       </div>

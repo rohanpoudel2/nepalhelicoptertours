@@ -1,6 +1,6 @@
 const express = require('express');
 const db = require('./config/db')
-const cors = require('cors');
+const cors = require('cors')
 
 const app = express();
 
@@ -58,6 +58,78 @@ app.get("/api/get/:id", (req, res) => {
   }
 
 })
+
+app.get("/api/gett", (req, res) => {
+  try {
+    db.query("SELECT * FROM FEATUREDTOURS", (err, result) => {
+      if (err) {
+        res.status(500).json({
+          status: 'failed',
+          msg: err
+        })
+      }
+      else {
+        res.status(200).json({
+          status: 'success',
+          msg: result
+        })
+      }
+    })
+  } catch (error) {
+    res.status(500).json({
+      status: 'failed',
+      msg: error
+    })
+  }
+
+})
+
+app.get("/api/getextra", (req, res) => {
+  try {
+    db.query("SELECT * FROM EXTRATOURS", (err, result) => {
+      if (err) {
+        res.status(500).json({
+          status: 'failed',
+          msg: err
+        })
+      } else {
+        res.status(200).json({
+          status: 'success',
+          msg: result
+        })
+      }
+    })
+  } catch (error) {
+    res.status(500).json({
+      status: 'failed',
+      msg: error
+    })
+  }
+})
+
+app.get("/api/getextra/:id", (req, res) => {
+  try {
+    db.query("SELECT * FROM EXTRATOURS WHERE EXTRATOURSID = ?", req.params.id, (err, result) => {
+      if (err) {
+        res.status(500).json({
+          status: 'failed',
+          msg: err
+        })
+      } else {
+        res.status(200).json({
+          status: 'success',
+          msg: result
+        })
+      }
+    })
+  } catch (error) {
+    res.status(500).json({
+      status: 'failed',
+      msg: error
+    })
+  }
+})
+
 
 app.listen(PORT, () => {
   console.log(`Server is listening on PORT ${PORT}`);

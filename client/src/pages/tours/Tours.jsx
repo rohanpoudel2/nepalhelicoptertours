@@ -2,8 +2,28 @@ import './tours.scss'
 import HelicopterTours from '../../images/toursbanner.jpeg'
 import ToursIcon from '../../components/toursicon/ToursIcon'
 import NewsLetter from '../../components/newsletter/NewsLetter'
+import { useEffect } from 'react'
+import axios from 'axios'
+import { useState } from 'react'
 
 const Tours = () => {
+
+  const [posts, setPosts] = useState([]);
+
+  const getPosts = async () => {
+    try {
+      const p = await axios.get('/get');
+      setPosts(p.data.msg);
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    getPosts()
+  }, [])
+
+
   return (
     <div className="tours">
       <div className="hero">
@@ -17,16 +37,9 @@ const Tours = () => {
         <div className="divider"> </div>
       </div>
       <div className="toursList">
-        <ToursIcon />
-        <ToursIcon />
-        <ToursIcon />
-        <ToursIcon />
-        <ToursIcon />
-        <ToursIcon />
-        <ToursIcon />
-        <ToursIcon />
-        <ToursIcon />
-        <ToursIcon />
+        {posts.map((data) => {
+          return <ToursIcon data={data} key={data.TOURSID} />
+        })}
       </div>
       <NewsLetter />
     </div>
