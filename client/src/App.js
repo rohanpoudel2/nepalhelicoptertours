@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Container } from '@mui/system'
 import NavBar from './components/navbar/NavBar'
 import Home from './pages/home/Home'
@@ -12,6 +12,7 @@ import ExtraTour from './pages/extratour/ExtraTour'
 import Gallery from './pages/gallery/Gallery'
 import Why from './pages/why/Why'
 import Affiliate from './pages/affiliate/Affiliate'
+import Employment from './pages/employment/Employment'
 
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
             <Route path='/gallery/:type' element={<Gallery />} />
             <Route path='/why' element={<Why />} />
             <Route path='/affiliate' element={<Affiliate />} />
+            <Route path='/employment' element={<Employment />} />
           </Routes>
           <Footer />
         </Container>

@@ -11,22 +11,19 @@ import { nanoid } from 'nanoid'
 const Home = () => {
 
   const [featured, setFeatured] = useState('');
-
-  const getFeatured = async () => {
-
-    try {
-      const f = await axios.get('/gett');
-      setFeatured(f.data.msg)
-      console.log(featured)
-    } catch (error) {
-      console.log(error)
-    }
-
-  }
-
   let count = 0
 
   useEffect(() => {
+    const getFeatured = async () => {
+
+      try {
+        const f = await axios.get('/gett');
+        setFeatured(f.data.msg)
+      } catch (error) {
+        console.log(error)
+      }
+
+    }
     getFeatured()
   }, [])
 

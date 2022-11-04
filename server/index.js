@@ -130,6 +130,29 @@ app.get("/api/getextra/:id", (req, res) => {
   }
 })
 
+app.get("/api/getJobs", (req, res) => {
+  try {
+    db.query("SELECT * FROM EMPLOYMENT", (error, result) => {
+      if (error) {
+        res.status(500).json({
+          status: 'failed',
+          msg: error
+        })
+      } else {
+        res.status(200).json({
+          status: 'success',
+          msg: result
+        })
+      }
+    })
+  } catch (error) {
+    res.status(500).json({
+      status: 'failed',
+      msg: error
+    })
+  }
+})
+
 
 app.listen(PORT, () => {
   console.log(`Server is listening on PORT ${PORT}`);

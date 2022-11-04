@@ -75,7 +75,9 @@ const Footer = () => {
             <Link to='/affiliate'>
               <div className="footer-link">Affiliate Program</div>
             </Link>
-            <div className="footer-link">Employment</div>
+            <Link to='/employment'>
+              <div className="footer-link">Employment</div>
+            </Link>
           </div>
         </div>
         <div className="footer-logo">

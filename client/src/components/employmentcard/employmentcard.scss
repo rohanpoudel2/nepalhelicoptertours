@@ -1,0 +1,51 @@
+@import '../../styles/colors.scss';
+
+.employmentcard {
+  .job {
+    empty-cells: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid lightgray;
+    border-top: 2px solid lightgray;
+    padding: 20px 0px;
+    margin-top: 20px;
+
+    .icon {
+      padding: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: $price-color;
+      color: white;
+      font-weight: 600;
+      font-size: 34px;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .details {
+      margin-left: 25px;
+
+      .job-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: $heading-color;
+      }
+    }
+
+    button {
+      margin-left: auto;
+      padding: 10px 20px;
+      font-size: 22px;
+      border-radius: 5px;
+      border: none;
+      background-color: $primary-color;
+      color: white;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
