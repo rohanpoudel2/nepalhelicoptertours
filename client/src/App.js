@@ -14,7 +14,6 @@ import Why from './pages/why/Why'
 import Affiliate from './pages/affiliate/Affiliate'
 import Employment from './pages/employment/Employment'
 
-
 const App = () => {
 
   return (

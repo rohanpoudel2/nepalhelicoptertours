@@ -1,5 +1,4 @@
 import './navbar.scss'
-import logo from '../../images/logo.gif'
 import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 
@@ -16,7 +15,7 @@ const NavBar = () => {
     <div className={`navbar ${responsiveNav && 'res'}`} >
       <div className="left" >
         <Link to='/'>
-          <img src={logo} alt="logo" />
+          <img src='https://nepalhelicoptertours.com/images/other/logo.gif' alt="logo" />
         </Link>
       </div >
       <div className="right">
@@ -31,8 +30,8 @@ const NavBar = () => {
             </button>
           </div>
           <div className={`nav-element ${page === '' && 'active'}`}><Link onClick={() => setResponsiveNav(!responsiveNav)} to='/'>Home</Link></div>
-          <div className={`nav-element ${page === 'tours' && 'active'}`}><Link onClick={() => setResponsiveNav(!responsiveNav)} to="/tours/type='trek'">Helicopter Treks</Link></div>
-          <div className={`nav-element ${page === 'contact' && 'active'}`}><Link onClick={() => setResponsiveNav(!responsiveNav)} to='/contact'>Contact</Link></div>
+          <div className={`nav-element ${page === 'tours' && 'active'}`}><Link onClick={() => setResponsiveNav(!responsiveNav)} to="/tours/type='trek'">Helicopter Tours</Link></div>
+          <div className={`nav-element ${page === 'extra' && 'active'}`}><Link onClick={() => setResponsiveNav(!responsiveNav)} to='/extra/id=4'>Private Charter</Link></div>
           <div className="nav-element" id='desktop'>
             <a href="https://wa.me/9779851038450?text=Hello%2C%20I%20have%20a%20question%20about%20your%20services.%20Can%20you%20please%20help%3F" target='_blank' rel="noreferrer">
               <button>

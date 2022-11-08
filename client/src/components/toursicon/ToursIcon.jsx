@@ -1,18 +1,20 @@
 import './toursicon.scss'
-import Muktinath from '../../images/tours/muktinath/muktinath.jpeg'
 import { Link } from 'react-router-dom'
 
 const ToursIcon = ({ data }) => {
+
+  const image = JSON.parse(data.IMAGES)
+
   return (
     <div className="toursicon">
       <div className="tourImage">
-        <img src={Muktinath} alt="tourIMG" />
+        <img src={image.image1} alt="tourIMG" />
       </div>
       <div className="tourDetails">
         <div className="tourTitle">{data.NAME}</div>
         <div className="tourPrice">
           <i className="fa-solid fa-tag"></i>
-          ₹{data.PRICE}
+          ${data.PRICE}
         </div>
         <div className="flightDetails">
           <div className="flightDetail">

@@ -5,9 +5,11 @@
   margin-bottom: 50px;
 
   .title {
-    font-size: 42px;
-    color: $heading-color;
-    font-weight: 700;
+    h1 {
+      font-size: 42px;
+      color: $heading-color;
+      font-weight: 700;
+    }
 
     .highlight {
       color: $highlight-color;

@@ -1,11 +1,9 @@
 import './hero.scss'
-import HeroVideo from '../../images/herovideo.mp4'
-import HeroVideoPoster from '../../images/herovideoposter.png'
 
 const Hero = () => {
   return (
     <div className="hero">
-      <video autoPlay loop muted poster={HeroVideoPoster} src={HeroVideo}></video>
+      <video autoPlay loop muted poster='https://nepalhelicoptertours.com/images/other/herovideoposter.png' src='https://nepalhelicoptertours.com/images/other/herovideo.mp4'></video>
       <div className="overlay">
         <span>
           Nepal Helicopter Tours

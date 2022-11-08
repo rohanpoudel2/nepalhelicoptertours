@@ -8,10 +8,12 @@
   width: 100%;
 
   .title {
-    font-size: 60px;
-    color: $heading-color;
-    font-weight: 700;
-    margin-bottom: 50px;
+    h1 {
+      font-size: 60px;
+      color: $heading-color;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
 
     span {
       color: $highlight-color;

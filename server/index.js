@@ -153,6 +153,52 @@ app.get("/api/getJobs", (req, res) => {
   }
 })
 
+app.get("/api/getFeaturedImage/:id", (req, res) => {
+  try {
+    db.query("SELECT IMAGES FROM TOURS T, FEATUREDTOURS FT WHERE T.TOURSID = FT.TOURSID AND FT.FeaturedToursID = ?", req.params.id, (err, result) => {
+      if (err) {
+        res.status(500).json({
+          status: 'failed',
+          msg: err
+        })
+      } else {
+        res.status(200).json({
+          status: 'success',
+          msg: result
+        })
+      }
+    })
+  } catch (error) {
+    res.status(500).json({
+      status: 'failed',
+      msg: error
+    })
+  }
+})
+
+app.post('/api/signup/:email', (req, res) => {
+  try {
+    db.query("INSERT INTO NEWSLETTER (email) VALUES (?)", req.params.email, (err, result) => {
+      if (err) {
+        res.status(500).json({
+          status: 'failed',
+          msg: err
+        })
+      } else {
+        res.status(200).json({
+          status: 'success',
+          msg: result
+        })
+      }
+    })
+  } catch (error) {
+    res.status(500).json({
+      status: 'failed',
+      msg: error
+    })
+  }
+})
+
 
 app.listen(PORT, () => {
   console.log(`Server is listening on PORT ${PORT}`);

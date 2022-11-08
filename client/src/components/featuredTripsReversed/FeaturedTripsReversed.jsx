@@ -1,13 +1,31 @@
 import './featuredtripsreversed.scss'
-import muktinath from '../../images/tours/muktinath/muktinath.jpeg'
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const FeaturedTripsReversed = ({ data }) => {
+
+  const [image, setImage] = useState('')
+
+  const getImage = async () => {
+    try {
+      const img = await axios.get(`/getFeaturedImage/${data.FeaturedToursID}`)
+      setImage(JSON.parse(img.data.msg[0].IMAGES))
+
+    } catch (error) {
+    }
+  }
+  useEffect(() => {
+
+    getImage()
+  }, [])
 
   return (
     <div className="featuredtripsreversed">
       <div className="left">
-        <img src={muktinath} alt="Muktinath" />
+        {image &&
+          <img src={image.image1} alt="Helicopter Tours" />
+        }
       </div>
       <div className="right">
         <div className="tripDesc">
@@ -18,7 +36,7 @@ const FeaturedTripsReversed = ({ data }) => {
           <div className="sub-title">
             Tour Stats from
             <div className="price">
-              ₹{data.PRICE}
+              ${data.PRICE}
             </div>
           </div>
           <div className="desc">

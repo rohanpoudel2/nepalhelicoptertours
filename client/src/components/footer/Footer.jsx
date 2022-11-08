@@ -1,5 +1,4 @@
 import './footer.scss'
-import FooterLogo from '../../images/logo.gif'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
@@ -81,7 +80,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-logo">
-          <img src={FooterLogo} alt="footer-logo" />
+          <img src='https://nepalhelicoptertours.com/images/other/logo.gif' alt="footer-logo" />
         </div>
       </div>
       <div className="footer-bottom-bar">

@@ -12,8 +12,12 @@
       flex: 1;
 
       .title {
-        font-size: 52px;
-        font-weight: 700;
+        h1 {
+
+          font-size: 52px;
+          font-weight: 700;
+        }
+
         color: $heading-color;
 
         .percentage {

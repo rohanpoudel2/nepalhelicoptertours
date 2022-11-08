@@ -7,6 +7,9 @@ import { useEffect } from 'react'
 import axios from 'axios'
 import { useState } from 'react'
 import { nanoid } from 'nanoid'
+import Loading from '../../pages/loading/Loading'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 const Home = () => {
 
@@ -28,27 +31,40 @@ const Home = () => {
   }, [])
 
   return (
-    featured &&
-    <div className="home">
-      <Hero />
-      <div className="greetTitle">
-        🚁 Explore Your Options 🚁
-        <div className="divider"> </div>
-      </div>
-      {featured.map((data) => {
-        count++;
-        if (count % 2 === 0) {
-          return (
-            <FeaturedTripsReversed data={data} key={nanoid()} />
-          )
-        } else {
-          return (
-            <FeaturedTrips data={data} key={nanoid()} />
-          )
-        }
-      })}
-      <NewsLetter />
-    </div>
+    featured ?
+      <>
+        <Helmet>
+          <title>Featured Helicopter Tours | Nepal Helicopter Tours</title>
+          <meta name='description' content="Best Handpicked Helicopter Tours in Nepal. Suitable for individuals and families looking for an ultimate travel experience in Nepal." />
+          <link rel="canonical" href={window.location.href} />
+        </Helmet>
+        <div className="home">
+          <Hero />
+          <div className="greetTitle">
+            🚁 Explore Your Options 🚁
+            <div className="divider"> </div>
+          </div>
+          {featured.map((data) => {
+            count++;
+            if (count % 2 === 0) {
+              return (
+                <FeaturedTripsReversed data={data} key={nanoid()} />
+              )
+            } else {
+              return (
+                <FeaturedTrips data={data} key={nanoid()} />
+              )
+            }
+          })}
+          <div className="viewMore">
+            <Link to='/tours/type="trek"'>
+              <button>View More Tours</button>
+            </Link>
+          </div>
+          <NewsLetter />
+        </div >
+      </> :
+      <Loading />
   )
 }
 

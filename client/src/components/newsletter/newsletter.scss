@@ -10,6 +10,13 @@
   border-top: 1px solid lightgray;
   padding-top: 50px;
 
+  .error {
+    color: red;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 800;
+  }
+
   h1 {
     color: $highlight-color;
     text-transform: uppercase;
@@ -17,7 +24,7 @@
     margin-bottom: 10px;
   }
 
-  h3 {
+  h2 {
     font-weight: 500;
   }
 
@@ -53,6 +60,7 @@
       padding: 20px 20px;
       border: none;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      outline: $highlight-color;
 
       @include small-down {
         width: 200px;

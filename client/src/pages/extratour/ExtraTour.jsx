@@ -13,6 +13,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const ExtraTour = () => {
 
@@ -41,6 +42,11 @@ const ExtraTour = () => {
   return (
     ExtraTour &&
     <>
+      <Helmet>
+        <title>{ExtraTour.NAME} in Nepal</title>
+        <meta name='description' content={ExtraTour.NAME + " in Nepal at an Affordable Price"} />
+        <link rel="canonical" href={window.location.href} />
+      </Helmet>
       <div className="extratour">
         <div className="hero">
           <Swiper

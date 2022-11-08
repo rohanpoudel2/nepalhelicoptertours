@@ -7,7 +7,7 @@
       position: relative;
 
       img {
-        height: 50vh;
+        height: 70vh;
         width: 100%;
         object-fit: cover;
         border-radius: 5px;
@@ -18,6 +18,10 @@
   .tourDetailsSection {
     display: flex;
     margin: 20px 0px;
+
+    @include small-down {
+      flex-direction: column-reverse;
+    }
 
     .tourDetailsBarSection {
       width: 80vw;
@@ -34,11 +38,27 @@
         text-align: justify;
         font-weight: 300;
       }
+
+      .itenery {
+        ol {
+          margin-left: 20px;
+
+          li {
+            font-size: 18px;
+          }
+        }
+      }
     }
 
     .tourDetailsBar {
       padding: 10px;
       border-radius: 5px;
+
+
+      @include small-down {
+        margin-top: 20px;
+        width: fit-content;
+      }
 
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.31);
       -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.31);
@@ -80,6 +100,7 @@
 
             @include small-down {
               width: 100%;
+              display: none;
             }
 
             i {
@@ -104,10 +125,20 @@
       width: 50vw;
       border-radius: 5px;
 
+      @include small-down {
+        display: flex;
+        width: fit-content;
+        margin-left: 0px;
+      }
+
       .title {
         font-size: 28px;
         font-weight: 700;
         color: $heading-color;
+
+        @include small-down {
+          font-size: 22px;
+        }
 
         .divider {
           width: 100px;
@@ -121,16 +152,47 @@
 
       .top {
 
-        .duration,
-        .items {
+        .duration {
+          margin-bottom: 10px;
+
+
           label {
             font-size: 18px;
             font-weight: 600;
+
+            @include small-down {
+              font-size: 16px;
+            }
           }
 
           span {
             font-weight: 400;
           }
+
+        }
+
+        .items {
+          display: flex;
+          flex-direction: column;
+
+          .item {
+            margin: 5px 0px;
+
+            label {
+              font-size: 18px;
+              font-weight: 600;
+
+              @include small-down {
+                font-size: 16px;
+              }
+            }
+
+            span {
+              font-weight: 400;
+            }
+
+          }
+
         }
 
         .price {
@@ -142,17 +204,37 @@
             color: $price-color;
             font-weight: 700;
             font-size: 28px;
+
+            @include small-down {
+              font-size: 24px;
+            }
           }
 
           span {
             font-size: 16px;
             font-weight: 300;
+
+            @include small-down {
+              font-size: 12px;
+            }
           }
         }
       }
 
       .bottom {
+
+        @include small-down {
+          margin-left: 10px;
+        }
+
         form {
+
+          .error {
+            color: red;
+            font-weight: 700;
+            font-size: 14px;
+          }
+
           .formitem {
             display: flex;
             flex-direction: column;
@@ -161,6 +243,10 @@
             label {
               font-size: 18px;
               font-weight: 700;
+
+              @include small-down {
+                font-size: 16px;
+              }
             }
 
             input {
